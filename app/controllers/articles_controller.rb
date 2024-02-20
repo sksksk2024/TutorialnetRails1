@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
     def index
       @articles = Article.all
     end
-  end
+   
 
   def show
     @article = Article.find(params[:id])
@@ -37,7 +37,7 @@ class ArticlesController < ApplicationController
     else
       render :edit, status: :unprocessable_entity
     end
-  end
+   
 
   def destroy
     @article = Article.find(params[:id])
